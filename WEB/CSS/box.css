@@ -1,0 +1,28 @@
+p {
+  font-size: 100px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transition: 1s;
+}
+
+.box:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+
+p:active {
+  color: blueviolet;
+}
+
+input:focus {
+  background-color: olive;
+}
+
+.box::before {
+  content: "before";
+  font-size: 30px;
+}
