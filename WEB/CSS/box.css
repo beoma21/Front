@@ -28,13 +28,19 @@ input:focus {
 }
 
 .parent {
-  width: 500px;
+  width: 300px;
   height: 300px;
   background-color: orange;
 }
 
 .child {
   width: 300px;
-  height: 50vh;
+  height: 100px;
   background-color: blueviolet;
+  /* margin: 10px; */
+  padding: 20px 10px;
+  border: 4px solid violet;
+  box-sizing: border-box;
+  overflow: scroll;
+  display: flex;
 }
