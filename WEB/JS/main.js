@@ -54,5 +54,23 @@ console.log(boxEl);
 // boxEl.addEventListener(1, 2);
 // boxEl.addEventListener('click', 2);
 boxEl.addEventListener('click', function() {
-    console.log("fire!!");
+    console.log("Click");
+    boxEl.classList.add("Active");
+    console.log(
+        boxEl.classList.contains('Active')
+        );
+    if(boxEl.classList.contains('Active'))
+    {
+        console.log('포함됨!');
+    };
+    // boxEl.classList.remove('Active');
 });
+
+if(true);
+
+
+const boxEls = document.querySelectorAll('.box');
+boxEls.forEach(function(boxEl, index) {
+    boxEl.classList.add(`order-${index+1}`);
+    console.log(index, boxEl);
+})
