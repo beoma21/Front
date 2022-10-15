@@ -23,7 +23,6 @@ input:focus {
 }
 
 .box::before {
-  content: "before";
   font-size: 30px;
 }
 

@@ -7,8 +7,49 @@ span.hello {
   text-decoration: underline;
 }
 
-
-* {
-  color: blue;
+.background {
+  width: 100px;
+  height: 200px;
+  background-color: orangered;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+
+.wrap {
+  background-color: chartreuse;
+  width: 600px;
+  height: 300px;
+}
+.container {
+  background-color: firebrick;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .item {
+  border: 10px;
+  width: 200px;
+  height: 100px;
+  background-color: aqua;
+  border-color: salmon;
+  box-sizing: border-box;
+}
+
+.container .item:hover {
+  border: 2px dashed red;
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  /* position: absolute;
+  right: 10px;
+  bottom: 10px;  */
+}
+
+
+
 
