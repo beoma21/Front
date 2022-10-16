@@ -6,10 +6,67 @@
     <title>Starbuck Coffee Korea</title>
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+     <!-- 나눔 고딕 폰트/머티리얼 아이콘 적용 적용 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
     <link rel="stylesheet" href="./CSS/main.css" />
+    <script defer src="./JS/main.js"></script>
+
+    <!-- 오픈그래프 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Starbucks" />
+    <meta property="og:title" content="Starbucks Coffee Korea" />
+    <meta property="og:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+    <meta property="og:image" content="./images/starbucks_seo.jpg" />
+    <meta property="og:url" content="https://starbucks.co.kr" />
+
+    <!-- 트위터 카드 -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="Starbucks" />
+    <meta property="twitter:title" content="Starbucks Coffee Korea" />
+    <meta property="twitter:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+    <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
+    <meta property="twitter:url" content="https://starbucks.co.kr" />
+
+   
+
 </head>
 <body>
-    <div>hello world!</div>
+    <!-- HEADER -->
+    <header>
+        <div class="inner">
+            <!-- / 하나 넣으면 현재 index.html 페이지 즉 메인 페이지로 이동 가능 -->
+            <a href="/">
+                <img  class="logo" src="./images/starbucks_logo.png" alt="Starbuck Logo">
+            </a>
+
+            <div class="sub-menu">
+                <ul class="menu">
+                    <li>
+                        <a href="/signin">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">My Starbucks</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Customer Service & Ideas</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Find a Store</a>
+                    </li>
+                </ul>
+                <div class="search">
+                    <input type="text" />
+                    <div class="material-icons">search</div>
+                </div>
+            </div>
+        </div>
+
+    </header>
     
 </body>
 </html>
