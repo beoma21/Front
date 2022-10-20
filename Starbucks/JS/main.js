@@ -41,3 +41,13 @@ window.addEventListener('scroll', _.throttle(function () {
   }
 }, 300));
 
+// VISUAL
+const fadeEls = document.querySelectorAll('.visual .fade-in')
+fadeEls.forEach(function (fadeEls, index) {
+  gsap.to(fadeEls, 1, {
+    delay: (index+1)*.5,
+    opacity: 1,
+    display: 'block'
+  });
+}) ;
+
