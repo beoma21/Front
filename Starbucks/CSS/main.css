@@ -350,7 +350,7 @@ body {
   .notice .notice-line .inner{
     height: 62px;
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   .notice .notice-line .inner__left{
@@ -378,9 +378,17 @@ body {
   }
 
   .notice .notice-line .inner__left .swiper-container{
-    background-color: orangered;
+    /* background-color: orangered; */
     height: 62px;
     flex-grow: 1;
+    
+  }
+
+  .notice .notice-line .inner__left .swiper-container a{
+    display: flex;
+    height: 62px;
+    align-items: center;
+    color: #fff;
     
   }
 
