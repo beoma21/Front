@@ -93,3 +93,19 @@ promotionToggleBtn.addEventListener('click', function() {
     promotionEl.classList.remove('hide');
   }
 })
+
+function random(min, max) {
+  return parseFloat((Math.random() * (max-min)+min).toFixed(2))
+}
+function floatingObject(selector, time, size) {
+  gsap.to(selector, random(1.5, 2.5), {
+    y: size,
+    repeat: -1,
+    yoyo: true,
+    delay: time,
+    ease: Power1. easeInOut
+  });
+}
+floatingObject('.floating1', 1, 15)
+floatingObject('.floating2', .5, 20)
+floatingObject('.floating3', 1.5, 30)
