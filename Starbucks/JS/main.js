@@ -16,30 +16,44 @@ searchInputEl.addEventListener('blur', function() {
 });
 
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top')
 
 
 // lodash cdn을 사용해서  _.throttle 일정 시간이 지날 때마다 함수를 실행하라
 // gsap cdn 애니메이션 효과
 window.addEventListener('scroll', _.throttle(function () {
-  console.log('scroll');
-  console.log(window.scrollY);
-
+  // 페이지 스크롤 위치가 500px이 넘으면.
   if (window.scrollY > 500) {
-    //배지 숨기기
-    // gsap.to(요소, 지속시간, 옵션)
-    gsap.to(badgeEl, .3, {
+    // Badge 요소 숨기기!
+    gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
-    });
-    // badgeEl.style.display = 'none';
+    })
+    // 상단으로 스크롤 버튼 보이기!
+    gsap.to(toTopEl, .2, {
+      x: 0
+    })
+
+  // 페이지 스크롤 위치가 500px이 넘지 않으면.
   } else {
-    // badgeEl.style.display = 'block';
-    gsap.to(badgeEl, .3, {
+    // Badge 요소 보이기!
+    gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
-    });
+    })
+    // 상단으로 스크롤 버튼 숨기기!
+    gsap.to(toTopEl, .2, {
+      x: 100
+    })
   }
 }, 300));
+// 상단으로 스크롤 버튼을 클릭하면,
+toTopEl.addEventListener('click', function () {
+  // 페이지 위치를 최상단으로 부드럽게(0.7초 동안) 이동.
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+});
 
 // VISUAL
 const fadeEls = document.querySelectorAll('.visual .fade-in')
@@ -61,7 +75,7 @@ new Swiper('.notice-line .swiper-container', {
 new Swiper('.promotion .swiper-container', {
   // direction: 'horizontal', 기본값
   slidesPerView: 3, // 한 번에 보여줄 슬라이드 수
-  spaceBetween: 10, // 슬라이드 사이 영백
+  spaceBetween: 10, // 슬라이드 사이 공백
   centeredSlides: true, // 1번  슬라이드가 가운데 보이기
   autoplay: {
     delay: 3000 //3초
@@ -76,6 +90,19 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next'
   }
 });
+
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30, // 슬라이드 사이 공백
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
+});
+
+
 
 
 const promotionEl = document.querySelector('.promotion');
@@ -122,3 +149,5 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당(필수!)
 })
 
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
