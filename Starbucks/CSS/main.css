@@ -288,7 +288,7 @@ body {
   /* VISUAL */
 
   .visual {
-    margin-top: 120px;
+    margin-top: 0px;
     /* header inner가 120이니까 그만큼 떨어지게 둔다.  */
     background-image: url("../images/visual_bg.jpg");
     background-position: center;
@@ -361,6 +361,7 @@ body {
 
   .notice .notice-line{
     position: relative;
+    margin-top: 120px;
     
   }
 
