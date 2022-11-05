@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Jquery 가져오기 -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
     <script defer src="./JS/youtube.js"></script>
     <script defer src="./JS/main.js"></script>
 
@@ -58,7 +58,7 @@
       
             <div class="sub-menu">
               <ul class="menu">
-                <li>
+                <li id="sign">
                   <a href="/signin">Sign In</a>
                 </li>
                 <li>
@@ -470,8 +470,9 @@
           <!-- shift 메서드로 텍스트만 변경하기 -->
           <script>
             function shift() {
-              $("#table").text("선물받기");
-            }
+              $("#table").text("e-Gift Card 선물받기");
+              $("#sign").html('<li id="sign"><a href="/signin">Sign out</a></li>');
+            };
            
           </script>
           <div class="btn gift" id="table">e-Gift Card 선물하기</div>
