@@ -151,3 +151,12 @@ spyEls.forEach(function (spyEl) {
 
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
+
+
+// 모달 팝업
+const modal = document.querySelector('.modal');
+const btnOpenPopup = document.querySelector('.open-popup');
+
+btnOpenPopup.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
