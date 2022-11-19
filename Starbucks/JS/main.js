@@ -156,7 +156,12 @@ thisYear.textContent = new Date().getFullYear();
 // 모달 팝업
 const modal = document.querySelector('.modal');
 const btnOpenPopup = document.querySelector('.open-popup');
+const btnClosePopup = modal.querySelector('.close-popup');
 
 btnOpenPopup.addEventListener('click', () => {
-  modal.style.display = 'block';
+  modal.style.display = 'block'
+});
+
+btnClosePopup.addEventListener('click', () => {
+  modal.style.display = 'none'
 });
