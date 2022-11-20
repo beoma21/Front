@@ -162,6 +162,3 @@ btnOpenPopup.addEventListener('click', () => {
   modal.style.display = 'block'
 });
 
-btnClosePopup.addEventListener('click', () => {
-  modal.style.display = 'none'
-});

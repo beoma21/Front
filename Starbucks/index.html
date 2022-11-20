@@ -666,10 +666,14 @@
 
       <div class="btn-group">
         <div href="javascript:void(0)" class="btn btn--white open-popup">개발자 편지
-          <div class="modal">
+          <div class="modal" style="cursor: default;">
             <div class="container">
               <h3 class="title">그대를 위한 시</h3>
-              <span class="material-icons close-popup" style ="cursor: pointer; text-align: right">close</span>
+              <div>
+                <span class="material-icons close-popup" style ="cursor: pointer; text-align: right" onclick="btnClosePopup.addEventListener('click', function () {
+                  modal.style.display = 'none'
+                });">close </span>
+              </div>
               <span>무엇이라 할까요?</span>
               <p>난 아직도 그대를 잘 모르겠오</p>
             </div>

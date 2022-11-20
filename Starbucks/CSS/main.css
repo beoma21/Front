@@ -1044,7 +1044,6 @@ footer .logo {
 
 .modal {
   position: absolute;
-
   display: none;
   background-color: #fff;
 }
@@ -1093,5 +1092,5 @@ footer .logo {
   height: 100%;
   background: #000;
   opacity: 0.6;
-  z-index: 8;
+  z-index: 6;
 }
