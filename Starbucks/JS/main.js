@@ -155,10 +155,24 @@ thisYear.textContent = new Date().getFullYear();
 
 // 모달 팝업
 const modal = document.querySelector('.modal');
-const btnOpenPopup = document.querySelector('.open-popup');
+const btnOpenPopup = document.querySelectorAll('.open-popup');
 const btnClosePopup = modal.querySelector('.close-popup');
 
-btnOpenPopup.addEventListener('click', () => {
-  modal.style.display = 'block'
+btnOpenPopup[0].addEventListener('click', () => {
+  modal.style.display = 'block',
+  console.log("hello?")
 });
+
+btnOpenPopup[1].addEventListener('click', () => {
+  modal.style.display = 'block',
+  console.log("hello?")
+});
+
+btnClosePopup.addEventListener('click', () => {
+  modal.style.display = 'none',
+  console.log("why?")
+});
+
+
+// 여러 개의 모달 창을 띄우고 닫으려면?
 
